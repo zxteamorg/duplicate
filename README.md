@@ -1,5 +1,7 @@
 # Duplicate
 
+[Manual](https://zxteamorg.github.io/duplicate/)
+
 ## Dev hints
 
 ### Build docs
