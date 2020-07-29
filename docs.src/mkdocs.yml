@@ -1,0 +1,37 @@
+site_name: Duplicate
+
+site_url: !!python/object/apply:os.getenv ["MKDOCS_SITE_URL"]
+
+docs_dir: src
+
+#theme: readthedocs
+#theme: windmill
+theme:
+  name: material
+  favicon: "images/favicon.jpg"
+  logo: "images/logo.jpg"
+  palette:
+    primary: "darkblue"
+    accent: "orange"
+
+nav:
+  - "Introduction": "index.md"
+
+# plugins:
+#   - markdownextradata: {}
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - pymdownx.snippets:
+      base_path: "src/include"
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+  - pymdownx.tasklist:
+      clickable_checkbox: true
+
+extra_javascript:
+  - js/mermaid.min.js
